@@ -1,5 +1,4 @@
 const express = require('express');
-
 const router = express.Router();
 
 router.get('/', (req, res, next) => {
@@ -7,4 +6,4 @@ router.get('/', (req, res, next) => {
     console.log('Meow home run');
 });
 
-module.exports(router);
+module.exports = router();
