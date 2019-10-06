@@ -8,7 +8,7 @@ const router = express.Router();
 router.get('/*', (req, res, next) => {
     res
         .status(404)
-        .sendFile(path.join(rootDir, 'views', 'error.html'));
+        .sendFile(path.join(rootDir, 'views', '404.html'));
 });
 
 module.exports = router;
