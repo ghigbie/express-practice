@@ -4,6 +4,13 @@
     <%- include('include/navigation.ejs' %>)
     <main>
         <h1>Users</h1>
+        <div>
+        <% users.forEach(user){ %>
+            <div>
+                <h4>Name <% user.name %></h4>
+            </div>
+        <% }%>
+        </div>
     </main>
 
 <%- include('include/footer.ejs') %>

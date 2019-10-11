@@ -12,7 +12,7 @@ router.get('/*', (req, res,next) => {
         {name: 'Ouch'},
     ];
 
-    res.render('error', {
+    res.render('users', {
             pageTitle: 'Users',
             users
         });
