@@ -6,13 +6,16 @@ const rootDir = require('./../utils/path');
 const router = express.Router();
 
 router.get('/*', (req, res,next) => {
-    const mainMessage = 'Page not Found!';
-    const criticism = 'What are you doing with your life?'
-    res
-        .status(404)
-        .render('error', {
-            pageTitle: 'Page Not Found',
-            mainMessage,
-            criticism
-        })
+    const users = [
+        {name: 'Bubba'},
+        {name: 'Moo'},
+        {name: 'Ouch'},
+    ];
+
+    res.render('error', {
+            pageTitle: 'Users',
+            users
+        });
 });
+
+module.exports = router;
