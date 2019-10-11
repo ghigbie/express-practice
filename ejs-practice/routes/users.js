@@ -5,7 +5,7 @@ const rootDir = require('./../utils/path');
 
 const router = express.Router();
 
-router.get('/*', (req, res,next) => {
+router.get('/users', (req, res, next) => {
     const users = [
         {name: 'Bubba'},
         {name: 'Moo'},
