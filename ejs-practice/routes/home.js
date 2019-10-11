@@ -8,7 +8,7 @@ const router = express.Router();
 router.get('/', (req, res, next) => {
     const welcome = 'Welcome home';
     res.render('home', {
-        pageTitle: Home,
+        pageTitle: 'Home',
         welcome
     });
 });
