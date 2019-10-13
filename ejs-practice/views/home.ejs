@@ -4,6 +4,10 @@
 <main>
     <h1>Home</h1>
     <h4><%= welcome %></h4>
+    <form method="POST" action="/add-user">
+        <input type="text" name="username"/>
+        <input type="submit"/>
+    </form>
 </main>
 
 <%- include('include/footer.ejs') %>
