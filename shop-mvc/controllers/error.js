@@ -1,4 +1,4 @@
-exports.getNotFound = (req, res, next) => {
+exports.get404 = (req, res, next) => {
     const pageTitle = 'Page Not Found'
     const message = 'What are you doing with your life?';
     res

@@ -4,6 +4,6 @@ const errorController = require('../controllers/error');
 const rootDir = require('../util/path');
 const router = express.Router();
 
-router.get('/*', errorController.getNotFound);
+router.get('/*', errorController.get404);
 
 module.exports = router;
