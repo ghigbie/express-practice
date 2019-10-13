@@ -1,5 +1,17 @@
 const products = [];
 
+exports.getProducts = (req, res, next) => {
+    const products = adminData.products;
+    res.render('shop', {
+        prods: products,
+        pageTitle: 'Shop',
+        path: '/',
+        hasProducts: products.length > 0,
+        activeShop: true,
+        productCSS: true
+    });
+}
+
 exports.getAddProduct = (req, res, next) => {
     res.render('add-product', {
         pageTitle: 'Add Product',
@@ -10,7 +22,7 @@ exports.getAddProduct = (req, res, next) => {
     });
 }
 
-exports.something = (req, res, next) => {
+exports.postAddProducts = (req, res, next) => {
     products.push({ title: req.body.title });
     res.redirect('/');
 }
