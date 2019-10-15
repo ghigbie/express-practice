@@ -1,4 +1,5 @@
-const products = []
+const fs = require('fs');
+const path = require('path')
 
 module.exports = class Product {
     constructor(title){
@@ -6,7 +7,11 @@ module.exports = class Product {
     }
 
     save(){
-        products.push(this);
+        const p = path.join(
+            path.dirname(process.mainModule.filename),
+            'data',
+            'products.json'
+            );
     }
 
     static fetchAll(){
